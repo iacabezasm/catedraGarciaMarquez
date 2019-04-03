@@ -1,0 +1,146 @@
+.semestre_catedra {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75em;
+  font-family: "Ancizar Serif";
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0.025em #222;
+}
+
+.contenedor_diracad {
+  margin: 0;
+  padding: 1em;
+  font-size: 1.2em;
+  color: #333;
+  border: none;
+  border-radius: 0.5em;
+  background: #fff;
+  opacity: 0.8;
+}
+
+.contenedor_diracad a,
+.contenedor_diracad a:link,
+.contenedor_diracad a:visited {
+  color: #5e00bd;
+  opacity: 0.8;
+}
+
+.contenedor_diracad a:hover,
+.contenedor_diracad a:active {
+  color: #5e00bd;
+  opacity: 1;
+}
+
+.contenedor_diracad h1,
+.contenedor_diracad h2,
+.contenedor_diracad h3,
+.contenedor_diracad h4,
+.contenedor_diracad h5,
+.contenedor_diracad h6 {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.125em 0;
+  /* color: #00ffff; */
+  /* color: #3400fb; */
+  color: #5e00bd;
+}
+
+.contenedor_diracad h1:not(:first-child),
+.contenedor_diracad h2:not(:first-child),
+.contenedor_diracad h3:not(:first-child),
+.contenedor_diracad h4:not(:first-child),
+.contenedor_diracad h5:not(:first-child),
+.contenedor_diracad h6:not(:first-child) {
+  margin: 0.5em 0;
+}
+
+.contenedor_diracad h2 {
+  border-bottom: dotted 1px;
+}
+
+.contenedor_diracad h2 {
+  font-size: 1.66em;
+}
+
+.contenedor_diracad h3 {
+  font-size: 1.33em;
+}
+
+.contenedor_diracad h4 {
+  font-size: 1.25em;
+}
+
+.contenedor_diracad ul,
+.contenedor_diracad ol {
+  margin: 0 0 0 1.5em;
+}
+
+.contenedor_diracad ul li,
+.contenedor_diracad ol li {
+  margin: 0 0 0.33em;
+}
+
+.contenedor_diracad ul {
+  list-style-type: initial;
+}
+
+.contenedor_diracad ul.botones-sesiones {
+  margin: 0;
+  padding: 0 0.5em;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contenedor_diracad ul.botones-sesiones li {
+  width: 10em;
+  margin: 0.5em;
+  text-align: center;
+  line-height: 3em;
+  background: #ddd;
+  border: none;
+  border-radius: 4px;
+}
+
+.contenedor_diracad ul.botones-sesiones li:hover {
+  background: #bbb;
+}
+
+.contenedor_diracad ul.botones-sesiones li a {
+  background: none;
+  cursor: pointer;
+}
+
+.contenedor_diracad table {
+  margin: 1em auto 0;
+  padding: 0;
+}
+
+.contenedor_diracad table th,
+.contenedor_diracad table td {
+  margin: 0;
+  padding: 0.33em;
+  line-height: 1em;
+  border: solid 1px #666;
+}
+
+.contenedor_diracad table caption {
+  margin: 0.5em 0;
+}
+
+.contenedor_diracad table thead,
+.contenedor_diracad table thead th,
+.contenedor_diracad table thead td {
+  font-weight: bold;
+  text-align: center;
+}
+
+.contenedor_diracad figure {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.contenedor_diracad img {
+  max-width: 100%;
+  height: auto;
+}
