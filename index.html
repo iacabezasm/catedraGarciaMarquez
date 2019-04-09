@@ -1,563 +1,518 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon; charset=binary">
-	<link rel="icon" href="favicon.ico" type="image/x-icon; charset=binary">
-	<title>Cátedra Gabriel García Márquez</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
-	<!-- Plantilla UN-->
-	<script src="public/js/libs/handlebars-latest.js"></script>
-	<script src="public/templates/plantilla_un.js"></script>
-	<script src="public/templates/inicio.js"></script>
-	<script src="public/templates/renderizar_plantillas.js"></script>
-	<!-- Hojas de estilo de la plantilla -->
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/stylesheet.css" media="all">
-	<link rel="stylesheet" type="text/css" href="public/css/libs/bootstrap.min.css" media="all">
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/reset.css" media="all">
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/unal.css" media="all">
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/tablet.css" media="only screen and (min-width: 992px) and (max-width: 1199px)">
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/small.css" media="only screen and (max-width: 991px)">
-	<link rel="stylesheet" type="text/css" href="public/css/plantilla/mainpage.css" media="all">
-	<!-- Hojas de estilo de la cátedra -->
-	<!-- <link rel="stylesheet" type="text/css" href="public/css/app/estilos_diracad.css" media="all"> -->
-	<link rel="stylesheet" type="text/css" href="public/css/app/estilos-catedra.css" media="all">
-	<!-- Librerias -->
-	<script src="public/js/libs/jquery_un.js" type="text/javascript"></script>
-	<script src="public/js/libs/jquery_3_3.js" type="text/javascript"></script>
-	<script src="public/js/libs/unal.js" type="text/javascript"></script>
-</head>
-<body>
-<!-- Plantilla UN -->
-<div id="plantilla_un_header">
-</div>
-<div id="plantilla_un_servicios">
-</div>
-<!-- Fin plantilla UN -->
-<div class="row_diracad">
-	<div class="col-md-4">
-		<!-- Inicio columna izquierda -->
-		<br>
-		<br>
-		<div class="container logo_sobre_menu">
-			<a href="http://diracad.bogota.unal.edu.co/" target="_blank"><img src="public/img/backgrounds/LOGO-DA.png" alt="Dirección Acádemica"/></a>
-		</div>
-		<div id="">
-			<div class="container container_menu">
-				<div class="left-menu">
-					<div class="btn-wid" id="btn_informacion_general" onclick="mostrar_seccion('informacion_general')">
-						<p>
-							<a>Información general</a>
-						</p>
-					</div>
-					<div class="btn-wid" id="btn_programa" onclick="mostrar_seccion('programa')">
-						<p>
-							<a>Programación</a>
-						</p>
-					</div>
-					<div class="btn-wid" id="btn_horarios" onclick="mostrar_seccion('horarios')">
-						<p>
-							<a>Horarios de atención</a>
-						</p>
-					</div>
-					<div class="btn-wid" id="btn_sesiones" onclick="mostrar_seccion('sesiones')">
-						<p>
-							<a>Sesiones</a>
-						</p>
-					</div>
-					<div class="btn-wid" id="btn_otra_cosa" onclick="mostrar_seccion('otra_cosa')">
-						<p>
-							<a>Conciertos plus</a>
-						</p>
-					</div>
-					<!--
-	        <div class="btn-wid" id="btn_hola" onclick="mostrar_seccion('hola')">
-	             <p> <a>  Principios de funcionamiento</a></p>
-	        </div>
-	        -->
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon; charset=binary">
+		<link rel="icon" href="favicon.ico" type="image/x-icon; charset=binary">
+		<title>Cátedra Gabriel García Márquez</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
+		<!-- Plantilla UN-->
+		<script src="public/js/libs/handlebars-latest.js"></script>
+		<script src="public/templates/plantilla_un.js"></script>
+		<script src="public/templates/inicio.js"></script>
+		<script src="public/templates/renderizar_plantillas.js"></script>
+		<!-- Hojas de estilo de la plantilla -->
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/stylesheet.css" media="all">
+		<link rel="stylesheet" type="text/css" href="public/css/libs/bootstrap.min.css" media="all">
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/reset.css" media="all">
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/unal.css" media="all">
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/tablet.css" media="only screen and (min-width: 992px) and (max-width: 1199px)">
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/small.css" media="only screen and (max-width: 991px)">
+		<link rel="stylesheet" type="text/css" href="public/css/plantilla/mainpage.css" media="all">
+		<!-- Hojas de estilo de la cátedra -->
+		<!-- <link rel="stylesheet" type="text/css" href="public/css/app/estilos_diracad.css" media="all"> -->
+		<link rel="stylesheet" type="text/css" href="public/css/app/estilos-catedra.css" media="all">
+		<!-- Librerias -->
+		<script src="public/js/libs/jquery_un.js" type="text/javascript"></script>
+		<script src="public/js/libs/jquery_3_3.js" type="text/javascript"></script>
+		<script src="public/js/libs/unal.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!-- Plantilla UN -->
+		<div id="plantilla_un_header"></div>
+		<div id="plantilla_un_servicios"></div>
+		<!-- Fin plantilla UN -->
+		<div class="row_diracad">
+			<div class="col-md-4">
+				<!-- Inicio columna izquierda -->
+				<br>
+				<br>
+				<div class="container logo_sobre_menu">
+					<a href="http://diracad.bogota.unal.edu.co/" target="_blank"><img src="public/img/backgrounds/LOGO-DA.png" alt="Dirección Acádemica"/></a>
 				</div>
-				<!-- Fin left-menu -->
-			</div>
-			<!-- Fin container -->
-			<div class="container container_menu">
-				<div class="left-menu">
-					<div class="btn-wid gray">
-						<p>
-							<a href="http://unradio.unal.edu.co/nc/detalle/cat/catedra-gabriel-garcia-marquez" target="_blank">UN Radio</a>
-						</p>
+				<div id="">
+					<div class="container container_menu">
+						<div class="left-menu">
+							<div class="btn-wid" id="btn_informacion_general" onclick="mostrar_seccion('informacion_general')">
+								<p><a>Información general</a></p>
+							</div>
+							<div class="btn-wid" id="btn_programacion" onclick="mostrar_seccion('programacion')">
+								<p><a>Programación</a></p>
+							</div>
+							<div class="btn-wid" id="btn_horarios" onclick="mostrar_seccion('horarios')">
+								<p><a>Horarios de atención</a></p>
+							</div>
+							<div class="btn-wid" id="btn_sesiones" onclick="mostrar_seccion('sesiones')">
+								<p><a>Sesiones</a></p>
+							</div>
+							<div class="btn-wid" id="btn_conciertos_plus" onclick="mostrar_seccion('conciertos_plus')">
+								<p><a>Conciertos plus</a></p>
+							</div>
+							<div class="btn-wid" id="btn_material" onclick="mostrar_seccion('material')">
+								<p><a>Material de apoyo</a></p>
+							</div>
+							<!--
+							<div class="btn-wid" id="btn_hola" onclick="mostrar_seccion('hola')">
+								 <p><a>Principios de funcionamiento</a></p>
+							</div>
+							-->
+						</div>
+						<!-- Fin left-menu -->
 					</div>
-					<div class="btn-wid gray">
-						<p>
-							<a href="https://campus.virtual.unal.edu.co/" target="_blank">Moodle</a>
-						</p>
+					<!-- Fin container -->
+					<div class="container container_menu">
+						<div class="left-menu">
+							<div class="btn-wid gray">
+								<p><a href="http://unradio.unal.edu.co/nc/detalle/cat/catedra-gabriel-garcia-marquez" target="_blank">UN Radio</a></p>
+							</div>
+							<div class="btn-wid gray">
+								<p><a href="https://campus.virtual.unal.edu.co/" target="_blank">Moodle</a></p>
+							</div>
+						</div>
+						<!-- Fin left-menu-->
 					</div>
+					<!-- Fin container -->
 				</div>
-				<!-- Fin left-menu-->
+				<!-- Fin columna izquierda -->
 			</div>
-			<!-- Fin container -->
-		</div>
-		<!-- Fin columna izquierda -->
-	</div>
-	<!-- Fin div col-md-4 -->
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="col-md-8">
-		<!-- Contenido de la página -->
-		<center><img class="img-responsive" src="public/img/backgrounds/logo.png" alt=""><br>
-		<span class="semestre_catedra">2019-I</span></center>
-		<br>
-		<div class="contenedor_diracad div_menu" id="div_informacion_general" style="display:none">
-			<h2>Presentación</h2>
-			<p>
-				 La música, el arte por excelencia, es de gran importancia no solo a nivel cultural, sino también social. Ésta brinda al individuo herramientas que fomentan la creatividad, la disciplina, el pensamiento lógico, la coordinación, la concentración y el trabajo en equipo entre otros; elementos fundamentales en la formación de personas capacitadas para aportar en la construcción continua de una mejor sociedad.
-			</p>
-			<h2>Contenidos</h2>
-			<p>
-				 La cátedra <em>Gabriel García Márquez: Realismo mágico musical</em> estará integrada por sesiones compuestas de conferencias y conciertos; los conciertos y demás eventos darán cuenta de la programación del Conservatorio de música de la Universidad y de las diversas propuestas musicales a nivel nacional e internacional.
-			</p>
-			<p>
-				 Los conferencistas y músicos – invitados internacionales y docentes – tratarán el contexto cultural e histórico del repertorio desarrollado y actuarán como solistas o formarán parte de una agrupación musical junto con los estudiantes del Conservatorio, interpretando las obras musicales según la temática de cada una de las sesiones.
-			</p>
-			<h2>Información general</h2>
-			<ul>
-				<li><b>Horario</b>: miércoles de 6 a 9 p.m.</li>
-				<li><b>Lugar</b>: Auditorio León de Greiff</li>
-				<li><b>Correo electrónico</b>: <a href="mailto:catgmarquez_bog@unal.edu.co" target="_blank">catgmarquez_bog@unal.edu.co</a></li>
-			</ul>
-		</div>
-		<div class="contenedor_diracad div_menu" id="div_programa" style="display:none">
-			<h2>Programación general</h2>
-			<p>
-				 Consulte aquí la programación semanal de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.
-			</p>
-			<p>
-				<b>Nota</b>: esta información puede estar sujeta a cambios
-			</p>
-			<table>
-			<caption>Programación 2019 - I</caption>
-			<thead>
-			<tr>
-				<th>
-					 Fecha
-				</th>
-				<th>
-					 Programa
-				</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>
-					 Abril 03
-				</td>
-				<td>
-				        <i>Dmitri Shostakovich Militar</i>
-				        (Sinfonia No 7)</br>
-					Dictada por el doctor en literatura: Pablo Jose Montoya</br>
-					Anthony Plog: Postcards para trompeta solo</br>
-					Juan Fernando Avendaño Trompetista
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Abril 10
-				</td>
-				<td>
-					<i>Un lápiz como un tigre entre las manos</i></br>
-					(literatura y música)
-	                                Pedro Alejo Gómez - escritor</br>
-					Concierto a cargo de los profesores de violin</br>
-                                        del Conservatorio de Música de UNAL:
-                               <ol>
-				   <li>
-					   Liz Angela García - violín
-					   Camilo Guevara
-					   Juan Carlos Higuita
-					   Leonardo Federico Hoyos
-					   Luis Darío Baracaldo
-					   Ala Voronkova  
-					   Diego García - cello
-					   William Mac McClure - piano
-					   Juan Sebastian Moreno
-					   Guerassim Voronkov
-					 
-                                        .
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Abril 17
-				</td>
-				<td>
-					 Sesion de CÁTEDRA PLUS</br>
-                                         Horario de 2:00 - 6:00 pm</br>
-                                         Auditorio del colegio IPARM
-				</td>
-			</tr>
-                        <tr>
-				<td>
-					 Abril 24
-				</td>
-				<td>
-					 Sesion de CÁTEDRA PLUS</br>
-                                         Horario de 6:00 - 9:00 pm</br>
-                                         Auditorio del colegio IPARM
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Mayo 01
-				</td>
-				<td>
-					 No hay clase (día festivo)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Mayo 08
-				</td>
-				<td>
-					<i>Seda y madera - tradition meets contemporary</i></br>
-                                        Instrumentos tradicionales 
-                                        con Orquesta Sinfonica del Conservatorio de Música</br>
-                                  <ol>
-			           <li>
-                                        Dr. Yi Ji-Yong - gayageum (Korea)</br> 
-                                        Hoang Anh Tu - dan bau (Vietnam)</br>
-                                        Jordi Figaró - tenora (Cataluña)</br>
-					Mario Sarmiento - multi percusión y chonta (Colombia)</br>
-                                  </li>
-			           </ol>
-                                       </br>
-                                       Conversatorio con compositores</br>
-                                       G.Parra, M.Bertran, D. Womack (USA), Do Hong Quan</br>
-                                       Moderador Ha jU-Yong.
-                                  </td>
-					
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Mayo 15
-				</td>
-				<td>
-				        Banda Sinfonica del Conservatorio de Música - UNAL</br>
-					Director: Cristian Camilo Malagón Tenza</br>
-					Serguéi Rajmáninov - Concierto No.2 para piano</br>
-					Solista Mari Kagehira</br>
-					
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Mayo 22
-				</td>
-				<td>
-				        <i>Ópera participativa</i></br>
-                                        Benjamin Britten - Noye's fludde</br>
-					Sesion de ensayo musical
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Mayo 29
-				</td>
-				<td>
-				        <i>Jardin de Tabaldak</i></br> 
-                                         Trio d'Argent</br> 
-                                         Francois Daudin Clavaud
-					  
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Junio 05
-				</td>
-				<td>
-					 <i>Ópera participativa</i></br>
-                                        Benjamin Britten - Noye's fludde</br>
-					Presentación de la ópera
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Junio 12
-				</td>
-				<td>
-					Beethoven y R. Strauss: Quijotes de música sinfónica </br>
-					Sinfonía No.5 - Ludwing van Beethoven</br>
-					Don Quijote - Richard Strauss</br> 
-                                        Solistas: Cecilia Palma - cello</br>
-                                                  Aníbal Dos Santos- viola</br>
-                                        Orquesta Sinfónica del Conservatorio de Música</br>
-                                        Director Guerassim Voronkov
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Junio 19
-				</td>
-				<td>
-					 Recital. María Katzarava - soprano (Mexico)</br>
-					 Guerassim Voronkov - piano
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Junio 26
-				</td>
-				<td>
-					Banda Sinfonica del Conservatorio de Música - UNAL</br>
-					Directores: Nestor Herrera, Cristian Camilo Rodríguez</br>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Julio 03
-				</td>
-				<td>
-					<i>contemporaneos opuestos</i></br>
-					Johannes Brahms:Concierto para violin y orquesta Op.77</br>
-                                        Solista Angeles Hoyos - violin</br>
-					Antonín Dvorak: Sinfonía No.8 - Dvorak</br>
-					Orquesta Sinfónica del Conservatorio de Música</br>
-                                        Directores: Guerassim Voronkov, Tetsuo Kagehira 
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Julio 10
-				</td>
-				<td>
-					<i>Tutta bravura</br></i></br>
-                                        Recital de Laura Reyes - soprano (Puerto Rico)
-					
-				</td>
-			</tr>
-			<tr>
-				<td>
-					 Julio 17
-				</td>
-				<td>
-					Exámen Final</br> 
-					Concierto de profesores del Conservatorio de Música </br>
-				</td>
-			</tr>
-			</tbody>
-			</table>
-		</div>
-		<div class="contenedor_diracad div_menu" id="div_horarios" style="display:none">
-			<h2>Horarios de atención</h2>
-			<p>Consulte aquí los horarios de atención de los monitores de la cátedra.</p>
-			<p><b>Nota</b>: esta información puede estar sujeta a cambios</p>
-			<table>
-				<thead>
-					<tr>
-						<th>
-							 Nombre
-						</th>
-						<th>
-							 Horario de atención
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td rowspan="2">
-							 Addie Buitrago Barrera
-						</td>
-						<td>
-							 Martes 12:00pm - 2:00pm
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Jueves 2:00pm - 4:00pm
-						</td>
-					</tr>
-					<tr>
-						<td rowspan="2">
-							 Daniela Rivera
-						</td>
-						<td>
-							 Lunes 9:00am - 11:00am
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Viernes 8:00am - 10:00am
-						</td>
-					</tr>
-					<tr>
-						<td rowspan="2">
-							 Karol Gisell Bermudez
-						</td>
-						<td>
-							 Martes 10:00am - 12:00pm
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Jueves 10:00am - 12:00pm
-						</td>
-					</tr>
-					<tr>
-						<td rowspan="2">
-							 Daniel García
-						</td>
-						<td>
-							 Martes 9:00am - 11:00am
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Jueves 2:00pm - 4:00pm
-						</td>
-					</tr>
-					<td rowspan="2">
-							 Luna Diaz
-						</td>
-						<td>
-							 Martes 2:00pm - 4:00pm
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Jueves 2:00pm - 4:00pm
-						</td>
-					</tr>
-					<td rowspan="2">
-							 Felipe Polanco
-						</td>
-						<td>
-							 Lunes 4:00pm - 6:00pm
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Martes 10:00am - 12:00pm
-						</td>
-					</tr>
-					<td rowspan="2">
-							 Sergio Iván Barbosa
-						</td>
-						<td>
-							 Martes 9:00am - 11:00am
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Jueves 1:00pm - 3:00pm
-						</td>
-					</tr>
-					<td rowspan="2">
-							 Iván Dario Garzón
-						</td>
-						<td>
-							 Miercoles 3:00pm - 5:00pm
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 Viernes 3:00pm - 5:00pm
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="contenedor_diracad div_menu" id="div_sesiones" style="display:none">
-			<h2>Sesiones</h2>
-			<ul class="botones-sesiones">
-				<li><a class="btn-wid" id="btn_sesion_1" onclick="mostrar_seccion('sesion_1')">Sesión 1: abril 3</a></li>
-				<!-- <li><a class="btn-wid" id="btn_sesion_2" onclick="mostrar_seccion('sesion_2')">Sesión 2: abril 10</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_3" onclick="mostrar_seccion('sesion_3')">Sesión 3: mayo 8</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_4" onclick="mostrar_seccion('sesion_4')">Sesión 4: mayo 15</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_5" onclick="mostrar_seccion('sesion_5')">Sesión 5: mayo 22</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_6" onclick="mostrar_seccion('sesion_6')">Sesión 6: mayo 29</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_7" onclick="mostrar_seccion('sesion_7')">Sesión 7: junio 5</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_8" onclick="mostrar_seccion('sesion_8')">Sesión 8: junio 12</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_9" onclick="mostrar_seccion('sesion_9')">Sesión 9: junio 19</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_10" onclick="mostrar_seccion('sesion_10')">Sesión 10: junio 26</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_11" onclick="mostrar_seccion('sesion_11')">Sesión 11: julio 3</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_12" onclick="mostrar_seccion('sesion_12')">Sesión 12: julio 10</a></li> -->
-				<!-- <li><a class="btn-wid" id="btn_sesion_13" onclick="mostrar_seccion('sesion_13')">Sesión 13: julio 17</a></li> -->
-			</ul>
-		</div>
-		<div class="contenedor_diracad div_menu" id="div_otra_cosa" style="display:none">
-			<h2>Programación de conciertos plus</h2>
-			<p>Consulte aquí la programación de conciertos plus de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.</p>
-		</div>
-
-		<!-- ********************************** -->
-
-		<div class="contenedor_diracad div_menu" id="div_sesion_1" style="display:none">
-			<h2>Sesión 1: abril 3</h2>
-			<h3>Juan Fernando Avendaño - Trompetista</h3>
-			<div class="row">
-				<div class="col-sm-4">
-					<figure>
-						<img src="public/documentos/sesion-1/juan-trompeta.jpeg" width="500"/>
-					</figure>
-					<p><i>“Postcards”</i> (Obra de 1994)<br/></p>
+			<!-- Fin div col-md-4 -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="col-md-8">
+				<!-- Contenido de la página -->
+				<center><img class="img-responsive" src="public/img/backgrounds/logo.png" alt=""><br>
+				<span class="semestre_catedra">2019-I</span></center>
+				<br>
+				<div class="contenedor_diracad div_menu" id="div_informacion_general" style="display:none">
+					<h2>Presentación</h2>
+					<p>La música, el arte por excelencia, es de gran importancia no solo a nivel cultural, sino también social. Ésta brinda al individuo herramientas que fomentan la creatividad, la disciplina, el pensamiento lógico, la coordinación, la concentración y el trabajo en equipo entre otros; elementos fundamentales en la formación de personas capacitadas para aportar en la construcción continua de una mejor sociedad.</p>
+					<h2>Contenidos</h2>
+					<p>La cátedra <em>Gabriel García Márquez: Realismo mágico musical</em> estará integrada por sesiones compuestas de conferencias y conciertos; los conciertos y demás eventos darán cuenta de la programación del Conservatorio de música de la Universidad y de las diversas propuestas musicales a nivel nacional e internacional.</p>
+					<p>Los conferencistas y músicos – invitados internacionales y docentes – tratarán el contexto cultural e histórico del repertorio desarrollado y actuarán como solistas o formarán parte de una agrupación musical junto con los estudiantes del Conservatorio, interpretando las obras musicales según la temática de cada una de las sesiones.</p>
+					<h2>Información general</h2>
 					<ul>
-						<li>Compositor Anthony Plog (13 Noviembre, 1947)</li>
-						<li>3 movimientos cortos: Moderato - Adagio - Moderato</li>
+						<li><b>Horario</b>: miércoles de 6 a 9 p.m.</li>
+						<li><b>Lugar</b>: Auditorio León de Greiff</li>
+						<li><b>Correo electrónico</b>: <a href="mailto:catgmarquez_bog@unal.edu.co" target="_blank">catgmarquez_bog@unal.edu.co</a></li>
 					</ul>
 				</div>
-				<div class="col-sm-8">
-					<p>Actualmente se desempeña como solista internacional y trompetista principal de la Orquesta
-					Sinfónica Nacional de Colombia. Es docente de la Universidad Nacional de Colombia y Universidad Javeriana y es director de la Academia Colombiana de Trompeta.</p>
-					<p>Ganador del segundo premio del concurso internacional de trompeta en <i>Lieksa Brass Week</i> Finlandia, 2012. Ha ganado también el primer premio de los concursos nacionales de trompeta: <i>Eric Aubier</i> 2001 y <i>Ciudad de Bogotá</i> 2005. Finalista del concurso internacional de trompeta de Budapest, Hungría en el 2009.</p>
-					<p>En Colombia ha integrado varias agrupaciones de carácter sinfónico, dentro de las cuales cabe resaltar la Orquesta Filarmónica de Bogotá,la Banda Sinfónica Nacional y la Banda Sinfónica de Villamaría, entre otras. También ha integrado y colaborado con: la World Symphony Orchestra 24/04, la Youth Orchestra of the Américas, Orquesta de los Países Andinos, la <i>London Sinfonia</i> de Inglaterra y la Orquesta Filarmónica De Santiago. En el <i>Schagerl Brass Festival 2014</i> hizo parte del <i>European Brass Ensamble</i>. Frecuentemente actúa como solista y profesor invitado de diferentes orquestas, universidades y seminarios de trompeta dentro y fuera del país.</p>
-					<p>Son de destacar sus presentaciones en los más importantes escenarios colombianos y en países como: Argentina, Chile, Costa Rica, Panamá, España, México, Guatemala, Hungría, Perú, Brasil, Estados Unidos y Austria.</p>
-					<p>Otras de las actividades que lidera son, el ensamble de metales <i>Cuprum</i> y la dirección de la <i>Yamaha Brass Academy</i> para Latinoamerica y el Caribe.</p>
-					<p>Juan Fernando es artista de la prestigiosa marca de instrumentos Yamaha.</p>
+				<div class="contenedor_diracad div_menu" id="div_programacion" style="display:none">
+					<h2>Programación general</h2>
+					<p>Consulte aquí la programación semanal de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.</p>
+					<p><b>Nota</b>: esta información puede estar sujeta a cambios</p>
+					<table>
+						<caption>Programación 2019 - I</caption>
+						<thead>
+							<tr>
+								<th>Fecha</th>
+								<th>Programa</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Abril 03</td>
+								<td>
+									<p><i>Dmitri Shostakovich Militar</i></p>
+									<p>(Sinfonia No 7)</p>
+									<p>Dictada por el doctor en literatura: Pablo Jose Montoya</p>
+									<p>Anthony Plog: Postcards para trompeta solo</p>
+									<p>Juan Fernando Avendaño Trompetista</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Abril 10</td>
+								<td>
+									<p><i>Un lápiz como un tigre entre las manos</i><br/>(literatura y música)</p>
+									<p>Pedro Alejo Gómez - escritor</p>
+									<p>Concierto a cargo de los profesores de violin del Conservatorio de Música de UNAL:</p>
+									<ul>
+										<li>Violinistas:
+										<ul>
+											<li>Liz Angela García</li>
+											<li>Camilo Guevara</li>
+											<li>Juan Carlos Higuita</li>
+											<li>Leonardo Federico Hoyos</li>
+											<li>Luis Darío Baracaldo</li><p>
+											<li>Ala Voronkova</li>
+										</ul>
+										</li>
+										<li>Violonchelista: Diego García</li>
+										<li>Pianistas:
+										<ul>
+											<li>William Mac McClure</li>
+											<li>Juan Sebastian Moreno</li>
+											<li>Guerassim Voronkov</li>
+										</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Abril 17</td>
+								<td>
+									<p>Sesion de CÁTEDRA PLUS</p>
+									<p>Horario de 2:00 - 6:00 pm</p>
+									<p>Auditorio del colegio IPARM</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Abril 24</td>
+								<td>
+									<p>Sesion de CÁTEDRA PLUS</p>
+									<p>Horario de 6:00 - 9:00 pm</p>
+									<p>Auditorio del colegio IPARM</p>
+								</td><p>
+							</tr>
+							<tr>
+								<td>Mayo 01</td>
+								<td>
+									 <p>No hay clase (día festivo)</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Mayo 08</td>
+								<td>
+									<p><i>Seda y madera - tradition meets contemporary</i></p>
+									<p>Instrumentos tradicionales con Orquesta Sinfonica del Conservatorio de Música</p>
+									<ul>
+										<li>Dr. Yi Ji-Yong - gayageum (Korea)</li>
+										<li>Hoang Anh Tu - dan bau (Vietnam)</li>
+										<li>Jordi Figaró - tenora (Cataluña)</li>
+										<li>Mario Sarmiento - multi percusión y chonta (Colombia)</li>
+									</ul>
+									<p>Conversatorio con compositores</p>
+									<p>G.Parra, M.Bertran, D. Womack (USA), Do Hong Quan</p>
+									<p>Moderador Ha jU-Yong.</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Mayo 15</td>
+								<td>
+									<p>Banda Sinfonica del Conservatorio de Música - UNAL</p>
+									<p>Director: Cristian Camilo Malagón Tenza</p>
+									<p>Serguéi Rajmáninov - Concierto No.2 para piano</p>
+									<p>Solista Mari Kagehira</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Mayo 22</td>
+								<td>
+									<p><i>Ópera participativa</i></p>
+									<p>Benjamin Britten - Noye's fludde</p>
+									<p>Sesion de ensayo musical</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Mayo 29</td>
+								<td>
+									<p><i>Jardin de Tabaldak</i></p>
+									<p>Trio d'Argent</p> 
+									<p>Francois Daudin Clavaud</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Junio 05</td>
+								<td>
+									<p><i>Ópera participativa</i></p>
+									<p>Benjamin Britten - Noye's fludde</p>
+									<p>Presentación de la ópera</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Junio 12</td>
+								<td>
+									<p>Beethoven y R. Strauss: Quijotes de música sinfónica</p>
+									<p>Sinfonía No.5 - Ludwing van Beethoven</p>
+									<p>Don Quijote - Richard Strauss</p> 
+									<ul>
+										<li>Solistas:
+											<li>Cecilia Palma - cello</li>
+											<li>Aníbal Dos Santos- viola</li>
+											<li>Orquesta Sinfónica del Conservatorio de Música</li>
+											<li>Director Guerassim Voronkov</li>
+										</li>	
+									</ul>		
+								</td> 
+							</tr>
+							<tr>
+								<td>Junio 19</td>
+								<td>
+									<p>Recital. María Katzarava - soprano (Mexico)</p>
+									<p>Guerassim Voronkov - piano</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Junio 26</td>
+								<td>
+									<p>Banda Sinfonica del Conservatorio de Música - UNAL</p>
+									<p>Directores: Nestor Herrera, Cristian Camilo Rodríguez</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Julio 03</td>
+								<td>
+									<p><i>contemporaneos opuestos</i></p>
+									<p>Johannes Brahms:Concierto para violin y orquesta Op.77</p>
+									<p>Solista Angeles Hoyos - violin</p>
+									<p>Antonín Dvořak: Sinfonía No.8 - Dvořak</p>
+									<p>Orquesta Sinfónica del Conservatorio de Música</p>
+									<p>Directores: Guerassim Voronkov, Tetsuo Kagehira</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Julio 10</td>
+								<td>
+									<p><i>Tutta bravura</i></p>
+									<p>Recital de Laura Reyes - soprano (Puerto Rico)</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Julio 17</td>
+								<td>
+									<p>Exámen Final</p> 
+									<p>Concierto de profesores del Conservatorio de Música </p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+				<div class="contenedor_diracad div_menu" id="div_horarios" style="display:none">
+					<h2>Horarios de atención</h2>
+					<p>Consulte aquí los horarios de atención de los monitores de la cátedra.</p>
+					<p><b>Nota</b>: esta información puede estar sujeta a cambios</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Horario de atención</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2"> Addie Buitrago Barrera</td>
+								<td>Martes 12:00pm - 2:00pm</td>
+							</tr>
+							<tr>
+								<td>Jueves 2:00pm - 4:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Daniela Rivera</td>
+								<td>Lunes 9:00am - 11:00am</td>
+							</tr>
+							<tr>
+								<td>Viernes 8:00am - 10:00am</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Karol Gisell Bermudez</td>
+								<td>Martes 10:00am - 12:00pm</td>
+							</tr>
+							<tr>
+								<td>Jueves 10:00am - 12:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Daniel García</td>
+								<td>Martes 9:00am - 11:00am</td>
+							</tr>
+							<tr>
+								<td>Jueves 2:00pm - 4:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Luna Diaz</td>
+								<td>Martes 2:00pm - 4:00pm</td>
+							</tr>
+							<tr>
+								<td>Jueves 2:00pm - 4:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Felipe Polanco</td>
+								<td>Lunes 4:00pm - 6:00pm</td>
+							</tr>
+							<tr>
+								<td>Martes 10:00am - 12:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Sergio Iván Barbosa</td>
+								<td>Martes 9:00am - 11:00am</td>
+							</tr>
+							<tr>
+								<td>Jueves 1:00pm - 3:00pm</td>
+							</tr>
+							<tr>
+								<td rowspan="2">Iván Dario Garzón</td>
+								<td>Miercoles 3:00pm - 5:00pm</td>
+							</tr>
+							<tr>
+								<td>Viernes 3:00pm - 5:00pm</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="contenedor_diracad div_menu" id="div_sesiones" style="display:none">
+					<h2>Sesiones</h2>
+					<p>Consulte aquí la programación de cada sesion de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.</p>
+					<ul class="botones-sesiones">
+						<li><a class="btn-wid" id="btn_sesion_1" onclick="mostrar_seccion('sesion_1')">Sesión 1: abril 3</a></li>
+						<li><a class="btn-wid" id="btn_sesion_2" onclick="mostrar_seccion('sesion_2')">Sesión 2: abril 10</a></li>
+						<li><a class="btn-wid" id="btn_sesion_3">Sesión 3: mayo 8</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_3" onclick="mostrar_seccion('sesion_3')">Sesión 3: mayo 8</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_4">Sesión 4: mayo 15</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_4" onclick="mostrar_seccion('sesion_4')">Sesión 4: mayo 15</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_5">Sesión 5: mayo 22</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_5" onclick="mostrar_seccion('sesion_5')">Sesión 5: mayo 22</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_6">Sesión 6: mayo 29</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_6" onclick="mostrar_seccion('sesion_6')">Sesión 6: mayo 29</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_7">Sesión 7: junio 5</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_7" onclick="mostrar_seccion('sesion_7')">Sesión 7: junio 5</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_8">Sesión 8: junio 12</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_8" onclick="mostrar_seccion('sesion_8')">Sesión 8: junio 12</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_9">Sesión 9: junio 19</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_9" onclick="mostrar_seccion('sesion_9')">Sesión 9: junio 19</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_10">Sesión 10: junio 26</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_10" onclick="mostrar_seccion('sesion_10')">Sesión 10: junio 26</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_11">Sesión 11: julio 3</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_11" onclick="mostrar_seccion('sesion_11')">Sesión 11: julio 3</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_12">Sesión 12: julio 10</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_12" onclick="mostrar_seccion('sesion_12')">Sesión 12: julio 10</a></li> -->
+						<li><a class="btn-wid" id="btn_sesion_13">Sesión 13: julio 17</a></li>
+						<!-- <li><a class="btn-wid" id="btn_sesion_13" onclick="mostrar_seccion('sesion_13')">Sesión 13: julio 17</a></li> -->
+					</ul>
+				</div>
+				<div class="contenedor_diracad div_menu" id="div_conciertos_plus" style="display:none">
+					<h2>Programación de conciertos plus</h2>
+					<p>Consulte aquí la programacion de los conciertos plus de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.</p>
+				</div>
+				<div class="contenedor_diracad div_menu" id="div_material" style="display:none">
+					<h2>Material de apoyo</h2>
+					<p>Consulte aquí  el material de apoyo académico de cada sesion de la <em>Cátedra Gabriel García Márquez: Realismo mágico musical</em>.</p>
+					<ul class="botones-sesiones">
+						<li><a class="btn-wid" id="btn_material_sesion_1" onclick="mostrar_seccion('material_sesion_1')">Sesión 1: abril 3</a></li>
+						<li><a class="btn-wid" id="btn_material_sesion_2" onclick="mostrar_seccion('material_sesion_2')">Sesión 2: abril 10</a></li>
+						<li><a class="btn-wid" id="btn_material_sesion_3">Sesión 3: mayo 8</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_3" onclick="mostrar_seccion('material_sesion_3')">Sesión 3: mayo 8</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_4">Sesión 4: mayo 15</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_4" onclick="mostrar_seccion('material_sesion_4')">Sesión 4: mayo 15</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_5">Sesión 5: mayo 22</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_5" onclick="mostrar_seccion('material_sesion_5')">Sesión 5: mayo 22</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_6">Sesión 6: mayo 29</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_6" onclick="mostrar_seccion('material_sesion_6')">Sesión 6: mayo 29</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_7">Sesión 7: junio 5</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_7" onclick="mostrar_seccion('material_sesion_7')">Sesión 7: junio 5</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_8">Sesión 8: junio 12</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_8" onclick="mostrar_seccion('material_sesion_8')">Sesión 8: junio 12</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_9">Sesión 9: junio 19</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_9" onclick="mostrar_seccion('material_sesion_9')">Sesión 9: junio 19</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_10">Sesión 10: junio 26</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_10" onclick="mostrar_seccion('material_sesion_10')">Sesión 10: junio 26</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_11">Sesión 11: julio 3</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_11" onclick="mostrar_seccion('material_sesion_11')">Sesión 11: julio 3</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_12">Sesión 12: julio 10</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_12" onclick="mostrar_seccion('material_sesion_12')">Sesión 12: julio 10</a></li> -->
+						<li><a class="btn-wid" id="btn_material_sesion_13">Sesión 13: julio 17</a></li>
+						<!-- <li><a class="btn-wid" id="btn_material_sesion_13" onclick="mostrar_seccion('material_sesion_13')">Sesión 13: julio 17</a></li> -->
+					</ul>
+				</div>
+				<!-- ******** -->
+				<!-- SESIONES -->
+				<!-- ******** -->
+				<div class="contenedor_diracad div_menu" id="div_sesion_1" style="display:none">
+					<h2>Sesión 1: abril 3</h2>
+					<h3>Juan Fernando Avendaño - Trompetista</h3>
+					<div class="row">
+						<div class="col-sm-4">
+							<figure>
+							<img src="public/documentos/sesion-1/juan-trompeta.jpeg" width="500"/>
+							</figure>
+							<p><i>“Postcards”</i> (Obra de 1994)</p>
+							<ul>
+								<li>Compositor Anthony Plog (13 Noviembre, 1947)</li>
+								<li>3 movimientos cortos: Moderato - Adagio - Moderato</li>
+							</ul>
+						</div>
+						<div class="col-sm-8">
+							<p>Actualmente se desempeña como solista internacional y trompetista principal de la Orquesta Sinfónica Nacional de Colombia. Es docente de la Universidad Nacional de Colombia y Universidad Javeriana y es director de la Academia Colombiana de Trompeta.</p>
+							<p>Ganador del segundo premio del concurso internacional de trompeta en <i>Lieksa Brass Week</i> Finlandia, 2012. Ha ganado también el primer premio de los concursos nacionales de trompeta: <i>Eric Aubier</i> 2001 y <i>Ciudad de Bogotá</i> 2005. Finalista del concurso internacional de trompeta de Budapest, Hungría en el 2009.</p>
+							<p>En Colombia ha integrado varias agrupaciones de carácter sinfónico, dentro de las cuales cabe resaltar la Orquesta Filarmónica de Bogotá,la Banda Sinfónica Nacional y la Banda Sinfónica de Villamaría, entre otras. También ha integrado y colaborado con: la World Symphony Orchestra 24/04, la Youth Orchestra of the Américas, Orquesta de los Países Andinos, la <i>London Sinfonia</i> de Inglaterra y la Orquesta Filarmónica De Santiago. En el <i>Schagerl Brass Festival 2014</i> hizo parte del <i>European Brass Ensamble</i>. Frecuentemente actúa como solista y profesor invitado de diferentes orquestas, universidades y seminarios de trompeta dentro y fuera del país.</p>
+							<p>Son de destacar sus presentaciones en los más importantes escenarios colombianos y en países como: Argentina, Chile, Costa Rica, Panamá, España, México, Guatemala, Hungría, Perú, Brasil, Estados Unidos y Austria.</p>
+							<p>Otras de las actividades que lidera son, el ensamble de metales <i>Cuprum</i> y la dirección de la <i>Yamaha Brass Academy</i> para Latinoamerica y el Caribe.</p>
+							<p>Juan Fernando es artista de la prestigiosa marca de instrumentos Yamaha.</p>
+						</div>
+					</div>
+					<h3>Pablo José Montoya Campuzano - Escritor</h3>
+					<div class="row">
+						<div class="col-sm-4">
+							<figure>
+							<img src="public/documentos/sesion-1/pablo_montoya.jpg" width="500"/>
+							</figure>
+							<p>Conferencia <i>Dmitri Shostakovich Militar</i> (Sinfonía No. 7)</p>
+						</div>
+						<div class="col-sm-8">
+							<p>Es un escritor colombiano nacido en Barrancabermeja, en 1963.</p>
+							<p>Realizó estudios de música en la Escuela Superior de música de Tunja y es graduado en filosofía y letras de la Universidad Santo Tomás de Aquino en Bogotá. Obtuvo la maestría y el doctorado en Estudios Hispánicos y Latinoamericanos en la Universidad de la Nueva Sorbona-París 3.</p>
+							<p>Obtuvo el Primer Premio del Concurso Nacional de Cuento <i>Germán Vargas</i> (1993). Por su notable trabajo ha recibido varios premios y reconocimientos entre los cuales se encuentran: la beca para escritores extranjeros en 1999 otorgada por el Centro Nacional del Libro de Francia por su libro Viajeros; en el 2000 el premio Autores Antioqueños por su libroHabitantes; su libro Réquiem por un fantasma fue premiado por la Alcaldía de Medellín en el 2005; ganador de la beca de creación artística de la Alcaldía de Medellín en 2007 para escribir el libro El beso de la noche; en 2008 obtuvo la beca de investigación en literatura otorgada por el Ministerio de Cultura que le permitió escribir <i>Novela histórica en Colombia, 1988-2008: entre la pompa y el fracaso</i>; y en 2012 obtuvo la beca de creación literaria, en la modalidad de novela, de la Alcaldía de Medellín.</p>
+							<p>En 2015 ganó la XIX Edición del Premio Rómulo Gallegos con su novela <i>Tríptico de la Infamia</i>, Random House Mondadori, 2014, siendo el quinto colombiano en obtener dicho reconocimiento.</p>
+							<p>A Montoya lo antecedieron Gabriel García Márquez en 1972, Manuel Mejía Vallejo en 1989, Fernando Vallejo en 2003 y William Ospina en 2009.</p>
+							<p>Actualmente es profesor de literatura de la Universidad de Antioquia y docente invitado en la Universidad Eafit, donde aborda el curso de Novela Histórica de la Maestría en Hermenéutica Literaria. Ha sido, igualmente, profesor invitado en las universidades de Mar del Plata y la Nueva Sorbona-París 3.</p>
+							<p>Coordina un taller de ensayo literario en la Universidad de Medellín. En su obra dialogan la historia, la música, el viaje, el erotismo, las bellas artes con la situación de exilio y violencia del hombre contemporáneo. Cercana siempre a la poesía, su escritura maneja con cuidado el lenguaje. En sus libros se presenta un conmovedor combate entre la desdicha y la ironía, la erudición y la desesperanza.</p>
+							<p>Sus novelas,cuentos y textos críticos han sido destacados en numerosas publicaciones nacionales y del exterior. Así mismo sus traducciones de escritores franceses y africanos, difundidas en distintas revistas y periódicos de América Latina y Europa.</p>
+						</div>
+					</div>
+				</div>
+				<div class="contenedor_diracad div_menu" id="div_sesion_2" style="display:none">
+					<h2>Sesión 2: abril 10</h2>
+					<h3>Pedro Alejo Gómez</h3>
+					<div class="row">
+						<div class="col-sm-4">
+							<figure>
+							<img src="public/documentos/sesion-2/pedro_alejo.jpg" width="500"/>
+							</figure>
+							<p>Conferencia <i>Un lápiz como un tigre entre las manos</i></p>
+						</div>
+						<div class="col-sm-8">
+							<p>Bogotá, (1953). Escritor y abogado. Ha sido embajador de Colombia en Holanda, delegado ante la Corte Permanente de Arbitraje de La Haya y ante la Organización para la Prohibición de las Armas Químicas, Gobernador ante el Fondo Común de Productos Básicos y conjuez del Consejo de Estado.</p> 
+							<p>Hizo estudios de filología y letras del ruso en Moscú, en la Universidad para la Amistad de los Pueblos Patricio Lumumba y de Derecho Administrativo en la Universidad de Paris.</p>
+							<p>Es miembro de número de la Academia Colombiana de la Lengua y del Cuerpo de regentes de la Universidad de América. Es el director de la Casa de Poesía José Asunción Silva desde el 2003.</p> 
+							<p>Ha publicado La estructura política del cielo (1975), El mundo espejo de mi mano iba, (ensayo sobre los cuentos de Pedro Gómez Valderrama, 1996), Retrato en el tiempo (2005), Catálogo de máscaras (2006), Tratado de alas (2007) y Cartografía de los espejos (2014).</p>
+						</div>
+					</div>
+				</div>
+				<!-- ******** -->
+				<!-- MATERIAL -->
+				<!-- ******** -->
+				<div class="contenedor_diracad div_menu" id="div_material_sesion_1" style="display:none">
+					Hola!!
+				</div>
+				<div class="contenedor_diracad div_menu" id="div_material_sesion_2" style="display:none">
+					Hola!!
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
 			</div>
-			<h3>Pablo José Montoya Campuzano - Escritor</h3>
-			<div class="row">
-				<div class="col-sm-4">
-					<figure>
-          	<img src="public/documentos/sesion-1/pablo_montoya.jpg" width="500"/>
-					</figure>
-					<p>Conferencia <i>Dmitri Shostakovich</i> (Sinfonía No. 7)</p>
-				</div>
-				<div class="col-sm-8">
-					<p>Es un escritor colombiano nacido en Barrancabermeja, en 1963.</p>
-					<p>Realizó estudios de música en la Escuela Superior de música de Tunja y es graduado en filosofía y letras de la Universidad Santo Tomás de Aquino en Bogotá. Obtuvo la maestría y el doctorado en Estudios Hispánicos y Latinoamericanos en la Universidad de la Nueva Sorbona-París 3.</p>
-					<p> Obtuvo el Primer Premio del Concurso Nacional de Cuento <i>Germán Vargas</i> (1993). Por su notable trabajo ha recibido varios premios y reconocimientos entre los cuales se encuentran: la beca para escritores extranjeros en 1999 otorgada por el Centro Nacional del Libro de Francia por su libro Viajeros; en el 2000 el premio Autores Antioqueños por su libroHabitantes; su libro Réquiem por un fantasma fue premiado por la Alcaldía de Medellín en el 2005; ganador de la beca de creación artística de la Alcaldía de Medellín en 2007 para escribir el libro El beso de la noche; en 2008 obtuvo la beca de investigación en literatura otorgada por el Ministerio de Cultura que le permitió escribir <i>Novela histórica en Colombia, 1988-2008: entre la pompa y el fracaso</i>; y en 2012 obtuvo la beca de creación literaria, en la modalidad de novela, de la Alcaldía de Medellín.</p>
-          <p>En 2015 ganó la XIX Edición del Premio Rómulo Gallegos con su novela <i>Tríptico de la Infamia</i>, Random House Mondadori, 2014, siendo el quinto colombiano en obtener dicho reconocimiento.</p>
-					<p> A Montoya lo antecedieron Gabriel García Márquez en 1972, Manuel Mejía Vallejo en 1989, Fernando Vallejo en 2003 y William Ospina en 2009.</p>
-          <p>Actualmente es profesor de literatura de la Universidad de Antioquia y docente invitado en la Universidad Eafit, donde aborda el curso de Novela Histórica de la Maestría en Hermenéutica Literaria. Ha sido, igualmente, profesor invitado en las universidades de Mar del Plata y la Nueva Sorbona-París 3.</p>
-					<p> Coordina un taller de ensayo literario en la Universidad de Medellín. En su obra dialogan la historia, la música, el viaje, el erotismo, las bellas artes con la situación de exilio y violencia del hombre contemporáneo. Cercana siempre a la poesía, su escritura maneja con cuidado el lenguaje. En sus libros se presenta un conmovedor combate entre la desdicha y la ironía, la erudición y la desesperanza.</p>
-          <p>Sus novelas,cuentos y textos críticos han sido destacados en numerosas publicaciones nacionales y del exterior. Así mismo sus traducciones de escritores franceses y africanos, difundidas en distintas revistas y periódicos de América Latina y Europa.</p>
-				</div>
-			</div>
+		<!-- Fin col-md-8 -->
 		</div>
-		<div class="contenedor_diracad div_menu" id="div_sesion_2" style="display:none">
-			<h2>Sesión 2: abril 3</h2>
-			...
-		</div>
+		<!-- fin row -->
 		<br>
 		<br>
-		<br>
-		<br>
-	</div>
-	<!-- Fin col-md-8 -->
-</div>
-<!-- fin row -->
-<br>
-<br>
-<div id="plantilla_un_footer">
-</div>
-<script type="text/javascript">
-	renderizar_plantilla_un();
-	renderizar_inicio();
-</script>
-<!-- Aplicación -->
-<script src="public/js/app/navegacion.js" type="text/javascript"></script>
-<script src="public/js/app/mis_scripts.js" type="text/javascript"></script>
-</body>
+		<div id="plantilla_un_footer"></div>
+		<script type="text/javascript">
+			renderizar_plantilla_un();
+			renderizar_inicio();
+		</script>
+		<!-- Aplicación -->
+		<script src="public/js/app/navegacion.js" type="text/javascript"></script>
+		<script src="public/js/app/mis_scripts.js" type="text/javascript"></script>
+	</body>
 </html>
